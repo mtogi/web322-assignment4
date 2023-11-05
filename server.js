@@ -8,7 +8,7 @@
 * 
 *  Name: Mustafa Toygar Baykal Student ID: 112398227 Date: November 4, 2023
 *
-*  Published URL: 
+*  Published URL: https://joyous-gold-pajamas.cyclic.app
 *
 ********************************************************************************/
 
@@ -26,13 +26,13 @@ const HTTP_PORT = process.env.PORT || 8080; // set port
 
 // get "/"
 app.get('/', (req, res) => {
-  res.render("home");
+  res.render("home", { page: '/' });
 });
 
-// get "/about"
 app.get('/about', (req, res) => {
-  res.render("about");
+  res.render("about", { page: '/about' });
 });
+
 
 // get "/lego/sets" to return all sets
 app.get('/lego/sets', (req, res) => {
